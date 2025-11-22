@@ -1,9 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+import RouteWrapper from "./Route";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <RouteWrapper />
   </StrictMode>
 );

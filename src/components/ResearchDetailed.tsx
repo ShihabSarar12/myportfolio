@@ -169,9 +169,7 @@ function ResearchPaper({
           <SectionTitle title="Results & Impact" />
         </div>
 
-        {/* BUTTONS */}
         <div className="flex flex-wrap gap-3 pt-6 border-t border-white/10">
-          {/* Open research page */}
           <a
             href={`/research/${paper.id}`}
             className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 bg-white/10 hover:bg-white/20 transition-colors text-white backdrop-blur-sm"

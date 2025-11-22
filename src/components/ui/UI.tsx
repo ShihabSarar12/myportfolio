@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { About } from "../About";
 import { AchievementsDetailed } from "../AchievementsDetailed";
 import { Contact } from "../Contact";
@@ -9,6 +10,24 @@ import { ResearchDetailed } from "../ResearchDetailed";
 import { SectionOverview } from "../SectionOverview";
 
 const UI = () => {
+  const scrollToHash = () => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        el?.scrollIntoView({ behavior: "smooth" });
+      }, 100); // wait 100ms for DOM to render
+    }
+  };
+
+  useEffect(() => {
+    // scroll on initial load
+    scrollToHash();
+
+    // scroll on hash change
+    window.addEventListener("hashchange", scrollToHash);
+    return () => window.removeEventListener("hashchange", scrollToHash);
+  }, []);
   return (
     <main className="relative z-40 w-screen">
       <Profile />
@@ -27,7 +46,7 @@ const UI = () => {
       <section className="min-h-screen">
         <Experience />
       </section>
-      <section className="min-h-screen">
+      <section className="min-h-screen" id="research">
         <ResearchDetailed />
       </section>
       <section className="min-h-screen">
