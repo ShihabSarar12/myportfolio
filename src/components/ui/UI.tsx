@@ -49,7 +49,7 @@ const UI = () => {
       <section className="min-h-screen" id="research">
         <ResearchDetailed />
       </section>
-      <section className="min-h-screen">
+      <section className="min-h-screen" id="achivement">
         <AchievementsDetailed />
       </section>
       <section className="min-h-screen">
