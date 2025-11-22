@@ -138,10 +138,8 @@ function ResearchPaper({
           </div>
         </div>
 
-        {/* DESCRIPTION */}
         <p className="text-white/70 mb-4">{paper.description}</p>
 
-        {/* IMPACT BOX */}
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
           <div className="flex items-start gap-2">
             <TrendingUp className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
@@ -149,7 +147,6 @@ function ResearchPaper({
           </div>
         </div>
 
-        {/* TAGS */}
         <div className="flex flex-wrap gap-2 mb-6">
           {paper.tags.map((tag: string) => (
             <span
@@ -161,7 +158,6 @@ function ResearchPaper({
           ))}
         </div>
 
-        {/* STATIC TITLES (NO ACCORDION ANYMORE) */}
         <div className="space-y-4 mb-6">
           <SectionTitle title="The Story Behind It" />
           <SectionTitle title="Problem Statement" />
@@ -195,7 +191,6 @@ function ResearchPaper({
   );
 }
 
-/* SIMPLE TITLE BLOCK (NO CONTENT, NO ACCORDION) */
 function SectionTitle({ title }: { title: string }) {
   return (
     <div className="rounded-lg bg-white/10 backdrop-blur-md border border-white/20 p-4 text-white font-medium">

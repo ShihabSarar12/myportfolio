@@ -16,15 +16,13 @@ const UI = () => {
       setTimeout(() => {
         const el = document.getElementById(id);
         el?.scrollIntoView({ behavior: "smooth" });
-      }, 100); // wait 100ms for DOM to render
+      }, 100);
     }
   };
 
   useEffect(() => {
-    // scroll on initial load
     scrollToHash();
 
-    // scroll on hash change
     window.addEventListener("hashchange", scrollToHash);
     return () => window.removeEventListener("hashchange", scrollToHash);
   }, []);
