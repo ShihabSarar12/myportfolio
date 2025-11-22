@@ -16,13 +16,15 @@ const UI = () => {
       setTimeout(() => {
         const el = document.getElementById(id);
         el?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+      }, 100); // wait 100ms for DOM to render
     }
   };
 
   useEffect(() => {
+    // scroll on initial load
     scrollToHash();
 
+    // scroll on hash change
     window.addEventListener("hashchange", scrollToHash);
     return () => window.removeEventListener("hashchange", scrollToHash);
   }, []);
@@ -47,7 +49,7 @@ const UI = () => {
       <section className="min-h-screen" id="research">
         <ResearchDetailed />
       </section>
-      <section className="min-h-screen">
+      <section className="min-h-screen" id="achivement">
         <AchievementsDetailed />
       </section>
       <section className="min-h-screen">
