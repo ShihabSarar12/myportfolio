@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { personalInfo } from '../data/portfolio';
@@ -35,6 +35,21 @@ export function Navbar() {
 
         setIsMobileMenuOpen(false);
     }, []);
+
+    useEffect(() => {
+        const onLoad = () => {
+            const scrollTo = localStorage.getItem('scrollTo');
+            console.log(scrollTo);
+            if (scrollTo) {
+                scrollToSection(scrollTo);
+            }
+        };
+
+        window.addEventListener('load', onLoad);
+        return () => {
+            window.removeEventListener('load', onLoad);
+        };
+    }, [scrollToSection]);
 
     return (
         <motion.nav className='fixed w-full z-50 text-white backdrop-blur-2xl'>
