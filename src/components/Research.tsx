@@ -27,16 +27,18 @@ const ResearchPaperPage = ({ id }: { id?: number }) => {
 
     return (
         <div className='min-h-screen bg-transparent text-white py-16 px-6'>
-            <button
-                onClick={() => {
-                    window.history.back();
-                }}
-                className='hover:cursor-pointer px-4 py-2 rounded-lg border border-white/10 bg-white/10 hover:bg-white/20 transition-colors text-white mb-4'
-            >
-                ← Back to Researches
-            </button>
+            <div className='flex justify-center items-center flex-col'>
+                <button
+                    onClick={() => {
+                        window.history.back();
+                    }}
+                    className='hover:cursor-pointer px-4 py-2 rounded-lg border border-white/10 bg-white/10 hover:bg-white/20 transition-colors text-white mb-4'
+                >
+                    ← Back to Researches
+                </button>
 
-            <ResearchCard paper={paper} />
+                <ResearchCard paper={paper} />
+            </div>
         </div>
     );
 };
@@ -77,7 +79,7 @@ const ResearchCard = ({ paper }: { paper: any }) => {
         html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
         html = html.replace(
             /!\[(.*?)\]\((.*?)\)/g,
-            '<img src="$2" alt="$1" class="mx-auto block rounded-lg my-4 w-5/6 max-h-[50rem]" />'
+            '<img src="$2" alt="$1" class="block rounded-lg my-4 lg:w-2/3 sm:w-full max-h-[50rem]" />'
         );
         html = html.replace(/\n/g, '<br />');
 
@@ -89,7 +91,7 @@ const ResearchCard = ({ paper }: { paper: any }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className='p-8 rounded-2xl border border-white/10 shadow-lg text-white transition-all mb-8'
+            className='p-8 lg:w-5/6 sm:w-full rounded-2xl border border-white/10 shadow-lg text-white transition-all mb-8'
         >
             <div className='flex items-start gap-4 mb-6'>
                 <div

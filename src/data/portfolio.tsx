@@ -1,5 +1,3 @@
-// Portfolio Data - Update this file to customize your portfolio content
-
 export const personalInfo = {
     name: 'Shihab Sarar',
     title: 'Computer Science & Engineering Professional',
