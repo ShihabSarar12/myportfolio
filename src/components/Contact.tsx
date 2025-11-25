@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
-export function Contact() {
+const Contact = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -245,4 +245,6 @@ export function Contact() {
             </motion.footer>
         </div>
     );
-}
+};
+
+export { Contact };

@@ -1,7 +1,7 @@
 import { useCallback, useRef } from 'react';
 import { useScroll } from '@react-three/drei';
 
-export function useScrollMemory() {
+const useScrollMemory = () => {
     const scroll = useScroll();
     const savedOffsetRef = useRef<number | null>(null);
 
@@ -24,4 +24,6 @@ export function useScrollMemory() {
     }, [scroll]);
 
     return { saveScroll, restoreScroll };
-}
+};
+
+export { useScrollMemory };

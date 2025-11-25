@@ -22,7 +22,7 @@ const categoryColors: Record<string, string> = {
     default: 'from-blue-500 to-purple-600',
 };
 
-export default function AchievementDetails({ id }: { id?: number }) {
+const AchievementDetails = ({ id }: { id?: number }) => {
     const achievement = useMemo(
         () => achievements.find((p) => p.id === Number(id)),
         [id]
@@ -95,4 +95,6 @@ export default function AchievementDetails({ id }: { id?: number }) {
             </motion.div>
         </div>
     );
-}
+};
+
+export default AchievementDetails;

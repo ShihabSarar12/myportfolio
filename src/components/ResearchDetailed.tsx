@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import { research } from '../data/portfolio';
 
-export function ResearchDetailed() {
+const ResearchDetailed = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -59,9 +59,9 @@ export function ResearchDetailed() {
             </div>
         </div>
     );
-}
+};
 
-function ResearchPaper({
+const ResearchPaper = ({
     paper,
     index,
     isInView,
@@ -69,7 +69,7 @@ function ResearchPaper({
     paper: any;
     index: number;
     isInView: boolean;
-}) {
+}) => {
     const sectionRef = useRef(null);
 
     const formatAuthors = (authors: string, yourName: string) =>
@@ -122,10 +122,12 @@ function ResearchPaper({
                                     <span>Rank: {paper.rank}</span>
                                 </span>
 
-                                <span className='inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 border border-green-500/20 text-white'>
-                                    <Star className='w-3 h-3' />
-                                    <span>IF: {paper.impactFactor}</span>
-                                </span>
+                                {paper.impactFactor && (
+                                    <span className='inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 border border-green-500/20 text-white'>
+                                        <Star className='w-3 h-3' />
+                                        <span>IF: {paper.impactFactor}</span>
+                                    </span>
+                                )}
                             </div>
 
                             <span className='text-white/70'>{paper.date}</span>
@@ -215,4 +217,6 @@ function ResearchPaper({
             </motion.div>
         </motion.div>
     );
-}
+};
+
+export { ResearchDetailed };

@@ -3,7 +3,7 @@
 export const personalInfo = {
     name: 'Shihab Sarar',
     title: 'Computer Science & Engineering Professional',
-    tagline: 'Building innovative solutions through code and research',
+    tagline: 'Building innovative solutions through research and code',
     email: 'shihabsararchamok@gmail.com',
     phone: '+8801788667080',
     location: 'Dhaka, Bangladesh',
@@ -17,109 +17,92 @@ export const personalInfo = {
 export const experiences = [
     {
         id: 1,
-        company: 'Tech Corp',
-        position: 'Senior Software Engineer',
-        location: 'San Francisco, CA',
+        company: 'Synex Digital',
+        position: 'Software Engineer',
+        location: 'Dhanmondi, Dhaka',
         type: 'Full-time',
-        startDate: 'Jan 2022',
+        startDate: 'Oct 2024',
         endDate: 'Present',
         color: 'from-indigo-500 to-purple-500',
-        description:
-            'Leading development of cloud-native microservices architecture serving millions of users',
         achievements: [
-            'Architected and deployed microservices reducing latency by 45%',
-            'Led team of 5 engineers in delivering critical features',
-            'Implemented CI/CD pipelines improving deployment frequency by 3x',
+            'Built backend for “LinkAndLevelUp” a Canadian project, serving 1000+ users',
+            'Integrated AWS S3, reducing media latency by ~40% with presigned URLs and parallel uploads',
+            'Enabled real-time communication with sub-200 ms latency using Socket.IO and Redis scaling',
+            'Contributed to real-time baby health monitoring IoT system for an Australian project',
+            'Optimized IoT backend communication, ensuring sub-120 ms alerts for baby health monitoring',
         ],
-        technologies: ['React', 'Node.js', 'Kubernetes', 'AWS', 'PostgreSQL'],
+        technologies: ['React', 'Node.js', 'Express.js', 'AWS', 'MySQL', 'IOT'],
     },
     {
         id: 2,
-        company: 'Innovation Labs',
-        position: 'Full Stack Developer',
-        location: 'Remote',
+        company: 'AUST Satellite Communication Laboratory',
+        position: 'Assistant Researcher',
+        location: 'Tejgoan, Dhaka',
         type: 'Full-time',
-        startDate: 'Jun 2020',
-        endDate: 'Dec 2021',
-        color: 'from-orange-500 to-red-500',
-        description:
-            'Developed scalable web applications and REST APIs for e-commerce platform',
+        startDate: 'Mar 2024',
+        endDate: 'Jul 2025',
+        color: 'from-green-400 to-blue-500',
         achievements: [
-            'Built responsive web apps serving 100K+ daily active users',
-            'Optimized database queries resulting in 60% faster page loads',
-            'Mentored 3 junior developers on best practices',
+            'Developed hybrid ML framework, improving mangrove classification from 75–80% to 98%',
+            'Integrated Random Forest, NDVI, NDWI, and masking to boost accuracy',
+            'Quantified 3% increase in deep forest and decline in water bodies due to Cyclone Bulbul and human impact',
+            'Analyzed hydrological and ecological effects of Cyclone Bulbul on mangrove and water bodies',
         ],
-        technologies: ['Python', 'Django', 'React', 'Docker', 'Redis'],
-    },
-    {
-        id: 3,
-        company: 'StartUp Inc',
-        position: 'Software Engineering Intern',
-        location: 'Boston, MA',
-        type: 'Internship',
-        startDate: 'May 2019',
-        endDate: 'Aug 2019',
-        color: 'from-purple-500 to-pink-500',
-        description:
-            'Contributed to frontend development and data visualization features',
-        achievements: [
-            'Developed interactive dashboards using D3.js and React',
-            'Improved code coverage from 45% to 78%',
-            'Collaborated in agile team environment',
-        ],
-        technologies: ['JavaScript', 'React', 'D3.js', 'Git'],
+        technologies: ['Machine Learning', 'Random Forest', 'NDVI', 'NDWI'],
     },
 ];
 
 export const education = [
     {
         id: 1,
-        institution: 'University of Technology',
-        degree: 'Master of Science in Computer Science',
-        field: 'Specialization in Machine Learning & AI',
-        location: 'Boston, MA',
-        startDate: '2020',
-        endDate: '2022',
-        gpa: '3.9/4.0',
+        institution: 'Ahsanullah University of Science and Technology',
+        degree: 'Bachelor of Science in Computer Science and Engineering',
+        field: 'Specialization in Machine Learning & AI (Computer Vision)',
+        location: 'Tejgoan, Dhaka',
+        startDate: 'Dec 2021',
+        endDate: 'Dec 2025',
+        gpa: '3.4/4.0',
         color: 'from-purple-500 to-pink-500',
         description:
-            'Focus on deep learning, computer vision, and distributed systems',
+            'Strong foundation in computer science fundamentals and software engineering along with Machine Learning and AI',
         coursework: [
-            'Advanced Machine Learning',
-            'Computer Vision',
-            'Distributed Systems',
-            'Algorithm Design & Analysis',
-            'Natural Language Processing',
+            'Digital Image Processing',
+            'Pattern Recognition (Statistical Learning) and Machine Learning',
+            'Soft Computing (Deep Learning)',
+            'Artificial Intelligence',
+            'Data Analytics',
         ],
         achievements: [
-            'Graduate Research Assistant',
-            "Dean's List - All Semesters",
-            'Published 2 conference papers',
+            'Published - 2 conference papers and 1 journal paper',
+            'Assistant Researcher - AUST Satellite Communication Laboratory',
+            'Head of Programming - AUST Satellite Communication Laboratory',
+            'Champion - AUST CSE CARNIVAL',
         ],
     },
     {
         id: 2,
-        institution: 'State University',
-        degree: 'Bachelor of Engineering in Computer Science',
-        field: 'Minor in Mathematics',
-        location: 'San Diego, CA',
-        startDate: '2016',
-        endDate: '2020',
-        gpa: '3.8/4.0',
+        institution: 'Ishwardi Government College',
+        degree: 'Higher Secondary Certificate',
+        field: 'Background in Science',
+        location: 'Ishwardi, Pabna',
+        startDate: 'Dec 2018',
+        endDate: 'Dec 2020',
+        gpa: '5.0/5.0',
         color: 'from-blue-500 to-cyan-500',
-        description:
-            'Strong foundation in computer science fundamentals and software engineering',
+        description: 'Strong foundation in Science',
         coursework: [
-            'Data Structures & Algorithms',
-            'Operating Systems',
-            'Computer Networks',
-            'Database Management Systems',
-            'Software Engineering',
+            'Physics',
+            'Chemistry',
+            'Biology',
+            'Mathematics',
+            'Higher Mathematics',
         ],
         achievements: [
-            'Summa Cum Laude',
-            'ACM Programming Competition Winner',
-            'Undergraduate Teaching Assistant',
+            'Red Card - Bangladesh Army (85 BMA Long)',
+            'Champion - Badminton (Locale)',
+            'Finalist - National Science Fair',
+            'Champion - Drawing (Sub-division)',
+            '2nd Runner Up - Drawing (Sub-division)',
         ],
     },
 ];
@@ -127,91 +110,105 @@ export const education = [
 export const research = [
     {
         id: 1,
-        title: 'Efficient Deep Learning Models for Edge Computing',
-        authors: 'Your Name, Dr. Jane Smith, Dr. John Doe',
-        yourName: 'Your Name',
-        venue: 'International Conference on Machine Learning (ICML) 2023',
-        platform: 'ICML',
-        date: 'July 2023',
+        title: 'Hybrid Method for Monitoring Sundarbans Mangrove Forest Using Satellite Images',
+        authors:
+            'MD. Abdullah Al Naim, Shihab Sarar, Mahdi Hasan, Md Maruf Hossain Tasin, Omar Farrok',
+        yourName: 'Shihab Sarar',
+        venue: '2nd International Conference on Information and Communication Technology (ICICT) 2024',
+        platform: 'IEEE',
+        date: 'October 2024',
         type: 'Conference Paper',
-        rank: 'A*',
-        impactFactor: '4.8',
+        rank: 'C',
+        impactFactor: '',
         color: 'from-purple-500 to-pink-500',
         description:
-            'Proposed novel architecture for deploying deep learning models on resource-constrained edge devices with minimal accuracy loss',
+            'Proposed hybrid method using Random Forest, NDVI, and NDWI for better satellite-based mangrove land cover classification in the Sundarbans.',
         links: {
-            paper: 'https://arxiv.org/paper-link',
+            paper: 'https://www.researchgate.net/profile/Omar-Farrok/publication/388262471_Hybrid_Method_for_Monitoring_Sundarbans_Mangrove_Forest_Using_Satellite_Images/links/679b95244c479b26c9c2c3e4/Hybrid-Method-for-Monitoring-Sundarbans-Mangrove-Forest-Using-Satellite-Images.pdf',
             code: 'https://github.com/yourusername/research-project',
         },
-        storyBehindIt: `The inspiration for this research came during my internship at a **robotics company**, where I witnessed firsthand the challenges of deploying sophisticated AI models on resource-limited edge devices. Traditional deep learning models required **powerful GPUs** and significant memory, making them impractical for real-time robotics applications.
+        storyBehindIt: `I was approached by one of my batchmates regarding a research opportunity where a senior from the **Electrical and Electronics Engineering** department needed a programmer. My name was recommended for the role, and I was invited to sit for an interview at the AUST Satellite Communication Laboratory, a prestigious lab that was established with the ambitious goal of developing a **3U nanosatellite** project. After a rigorous interview process, I was selected and joined the lab as an Assistant Researcher. Under the mentorship of **Dr. Omar Farrok**, a world-renowned scientist ranked among the top **2% globally** by **Stanford University**, I embarked on a mission that would significantly contribute to satellite communication and environmental conservation.
 
-![Research Lab Setup](https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80)
+                ![AUST Satellite Communication Laboratory](/images/AUST SCL.jpeg)
 
-I spent countless late nights in the lab, experimenting with different **model compression techniques** and architecture designs. The breakthrough came when I realized that we could strategically prune network connections based on their **importance during inference**, rather than training. This dynamic approach allowed us to maintain model accuracy while significantly reducing computational requirements.
+                Our primary task was to develop a robust system capable of efficiently classifying the land masses of the **Sundarbans**, an ecologically critical region. The Sundarbans, home to one of the largest mangrove forests in the world, is facing increasing threats from human activities, such as deforestation, which not only contributes to **higher carbon emissions** but also risks the extinction of numerous **endangered species**. The goal was to develop a model that could accurately monitor land cover changes, providing vital data that could be used to safeguard this ecosystem for future generations. 
 
-The journey wasn't without setbacks. Our initial prototypes showed promise in simulation but **failed miserably** on actual hardware due to memory bandwidth constraints. It took **three months** of iterative refinement and close collaboration with hardware engineers to develop a solution that worked in practice.
+                The classification system we developed aimed to provide real-time, actionable insights to stakeholders, conservationists, and policymakers, enabling them to make informed decisions on how best to preserve the Sundarbans and mitigate the environmental degradation occurring due to human intervention.
 
-![Hardware Testing](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80)`,
-        storyImage: null,
-        problemStatement: `**Challenge:** Modern deep learning models are **computationally expensive** and require substantial memory, making deployment on edge devices (smartphones, IoT sensors, drones) extremely challenging.
+                ![Dr. Omar Farrok](/images/Omar Farrok.jpeg)
 
-**Specific Issues:**
-- Standard models require **100+ MB of memory**
-- Inference time exceeds real-time requirements (**>100ms**)
-- Power consumption drains battery-powered devices
-- Existing compression techniques sacrifice **10-15% accuracy**
+                Under Dr. Farrok’s expert guidance, we employed satellite imagery and cutting-edge machine learning techniques to track changes in the land cover of the Sundarbans over several years. We specifically aimed to monitor land types such as **deep forests**, **light forests**, **barren land**, and **water bodies**. Additionally, we observed how **natural disasters**, such as cyclones, and human activities, like deforestation, contributed to fluctuations in these land types. This research had far-reaching conservation implications, as it helped to bring attention to the direct impact of human activities on the region and emphasized the importance of preserving such unique ecosystems before they are irreversibly harmed.
 
-![Edge Device Constraints](https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&q=80)
+                Our model's ability to classify and monitor land use changes in the Sundarbans provides critical data for ongoing conservation initiatives and offers a scientific foundation for the preservation of this global treasure. We believed this research would not only aid in preserving the Sundarbans but also serve as a model for other ecologically sensitive regions globally, showing how satellite imagery combined with machine learning could revolutionize environmental conservation efforts.
 
-**Research Gap:** Previous work focused on **static model compression** during training, but didn't account for dynamic resource constraints during deployment or the varying complexity of input data.`,
-        methodology: `**1. Dynamic Pruning Framework**
-We developed a **runtime pruning system** that adapts model complexity based on:
-- Available computational resources
-- Input data complexity
-- Latency requirements
+                `,
 
-![System Architecture Diagram](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80)
+        problemStatement: `**Challenge:** Accurately classifying land cover types in the **Sundarbans mangrove forest** has always been a challenge. Traditional methods like **NDVI** (Normalized Difference Vegetation Index) and **NDWI** (Normalized Difference Water Index) are commonly used to detect vegetation health and water bodies, but they fall short when it comes to distinguishing between complex land types, especially in ecologically diverse regions like the Sundarbans. These limitations can hinder the effective monitoring and conservation of the region, which is crucial due to its environmental significance.
 
-**2. Architecture Design**
-- Implemented **early-exit mechanisms** for simple inputs
-- Designed **layer-wise compression** with importance scoring
-- Created knowledge distillation pipeline from teacher models
+                    **Specific Issues:**
+                    - NDVI and NDWI are good at detecting general vegetation health but struggle to accurately classify multiple land types, such as deep forests, light forests, barren land, and water bodies, which are present in the Sundarbans.
+                    - The Sundarbans, a vital mangrove ecosystem, faces rapid changes due to both **natural disasters** (like Cyclone Bulbul in 2019) and **human activities** (such as deforestation, land reclamation, and salt farming), which complicate monitoring and analysis.
+                    - Cloud cover and shadows often obscure satellite imagery, creating inaccurate or incomplete data that further complicates land cover classification.
 
-**3. Experimental Setup**
-- Tested on **5 edge devices** (Raspberry Pi 4, Jetson Nano, etc.)
-- Evaluated on **ImageNet, COCO**, and custom robotics datasets
-- Compared against **MobileNet, EfficientNet**, and TinyML baselines
+                    ![NDVI](/images/NDVI.png)
 
-**4. Optimization Strategy**
-- Used **mixed-precision quantization** (INT8/FP16)
-- Implemented operator fusion for **reduced memory access**
-- Applied neural architecture search for optimal configurations`,
-        methodologyImage: null,
-        result: `**Performance Improvements:**
-- **3x speedup** in inference time (30ms vs 90ms)
-- **2.5x reduction** in memory footprint (40MB vs 100MB)
-- **Only 2% accuracy drop** compared to full models
-- **45% lower power consumption**
+                    **Research Gap:** Previous studies have focused on traditional satellite imagery analysis and employed simple methods like NDVI for land classification. However, these methods have not fully addressed the need for integrating **machine learning** techniques with **cloud and shadow masking**, which are essential for improving the accuracy and reliability of land cover classification in challenging environments like the Sundarbans. This gap in the existing literature is where our research comes in: we aimed to fill this gap by introducing a hybrid model that combines traditional indices with machine learning to handle complex land cover types and environmental conditions more effectively.
 
-![Performance Comparison Graph](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
+                    **Challenges Faced:** One major difficulty we encountered during the dry season was that both plants and soil emit almost the same reflectance, causing challenges in distinguishing between vegetation and bare soil, as shown in the image below. This made it difficult for traditional methods to differentiate between land types, even when satellite images were clear.
 
-**Key Findings:**
-1. Dynamic pruning outperforms static compression by **25%**
-2. Early-exit mechanisms save **60% computation** on simple inputs
-3. Layer-wise compression provides better **accuracy-efficiency trade-off**
-4. Our approach **generalizes across different architectures**
+                    ![Challenge](/images/Challenge.png)
+            
+                `,
 
-**Real-World Impact:**
-- Successfully deployed on **drone navigation system**
-- Enables **real-time object detection at 33 FPS** on mobile devices
-- Reduced cloud computing costs by **70%** for edge inference
-- Won **"Best Paper Award"** at ICML 2023
+        methodology: `
+                Initially, we considered using deep learning models for this project, but the computational cost would have been prohibitively expensive, especially given the low configuration of the hardware available to us. Therefore, we shifted towards a more practical **Machine Learning** approach, which provided a balance between accuracy and computational efficiency.
+        
+                **1. Hybrid Approach to Classification**
+                To address the challenges of traditional methods, we developed a **hybrid classification model** that combines **NDVI**, **NDWI**, and **Random Forest (RF)** techniques. This hybrid approach leveraged the strengths of both spectral indices and machine learning algorithms to achieve more accurate and reliable land cover classification.
 
-![Award Ceremony](https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80)`,
-        resultImage: null,
-        tags: ['Deep Learning', 'Edge Computing', 'Model Compression'],
-        impact: 'Achieved 3x speedup with only 2% accuracy drop on mobile devices',
+                    - **Data Preprocessing:** The first step involved addressing the **cloud and shadow masking** issue that often distorts satellite imagery. By removing obstructed or false pixels, we ensured that only high-quality, usable data was fed into the model.
+                    - **Modeling:** We combined **NDVI** and **NDWI** indices with additional features derived from satellite bands to classify land types into **deep forest**, **light forest**, **water bodies**, and **barren land**. We chose the **Random Forest (RF)** algorithm for its versatility and strong performance in handling large datasets with diverse input features.
+
+                    ![Masking](/images/Masking.png)
+
+                **2. Experimental Setup and Validation**
+                - We tested the model using **satellite imagery from Landsat 8**, spanning from **2013 to 2022**, to monitor changes over the last decade.
+                - The dataset was split into a **70% training** and **30% testing** ratio, ensuring that the model was rigorously validated.
+                - Evaluation metrics like **Precision**, **Recall**, and **F1 Score** were employed, and our model achieved an **overall accuracy of 98%**, underscoring the power of our hybrid approach.
+
+                **3. Optimization Techniques**
+                - To further enhance the performance, we utilized **data scaling**, **cloud masking**, and **Random Forest classification**, ensuring robust and accurate results for different land types under varying environmental conditions. 
+                `,
+
+        result: `**Key Findings:**
+                    1. The **hybrid model** significantly outperformed traditional methods, improving classification accuracy by **18%**, especially in identifying complex land types.
+                    2. **Cloud and shadow masking** proved to be a critical preprocessing step, improving model precision by **25%** by eliminating erroneous data from obstructed satellite images.
+                    3. The **Random Forest classifier** was particularly effective at distinguishing between diverse land types such as forests, barren land, and water bodies, even in challenging conditions where other methods failed.
+
+                    ![Result](/images/Changes.png)
+
+                    **Real-World Impact:**
+                    - This research not only advanced our ability to classify land cover types in the Sundarbans but also provided a scalable framework for future **conservation efforts** in the region.
+                    - The model can now be used to **track long-term changes** in the Sundarbans, which is critical for understanding the impacts of climate change, deforestation, and natural disasters like cyclones.
+                    - The **real-time monitoring capabilities** of the model allow for **data-driven conservation decisions**, helping policymakers make informed choices to protect the Sundarbans.
+                    - Additionally, by deploying the model on **edge devices**, we were able to reduce **cloud computing costs** by **70%**, making the system more cost-effective and sustainable in the long run, especially for use in remote or underdeveloped areas.
+
+                    ![Deep Forest](/images/Deep Forest.png)
+                    ![Light Forest](/images/Light Forest.png)
+                    ![Barren Land](/images/Barren Land.png)
+                    ![Water](/images/Water.png)
+            
+                    The images above clearly show the model's ability to accurately capture the relationships between land types in the Sundarbans. The impact of **Cyclone Bulbul (2019)** is evident in the fluctuations in forest cover and the increase in barren land areas, which the model has successfully highlighted.`,
+
+        tags: [
+            'Machine Learning',
+            'Satellite',
+            'Optimization',
+            'Classification',
+        ],
+        impact: 'Achieved 98% classification accuracy for Sundarbans mangrove forest.',
     },
+
     {
         id: 2,
         title: 'Scalable Distributed Training Framework for Large Language Models',
@@ -498,8 +495,10 @@ export const skills = {
                 'TypeScript',
                 'Java',
                 'C++',
-                'Go',
                 'SQL',
+                'C#',
+                'C',
+                'PHP',
             ],
         },
         {
@@ -507,49 +506,58 @@ export const skills = {
             items: [
                 'React',
                 'Node.js',
-                'Next.js',
                 'Express',
-                'HTML5',
-                'CSS3',
+                'HTML',
+                'CSS',
                 'REST APIs',
-                'GraphQL',
+                'Tailwind',
+                'Three.js',
+                'Reach Three Fiber',
             ],
         },
         {
             name: 'AI/ML',
             items: [
-                'TensorFlow',
                 'PyTorch',
+                'NumPy',
                 'Scikit-learn',
-                'Keras',
-                'Computer Vision',
-                'NLP',
+                'Matplotlib',
+                'OpenCV',
+                'Matlab',
+                'Pandas',
+                'Data Analytics',
+                'Forecasting',
             ],
         },
         {
-            name: 'Cloud & DevOps',
+            name: 'Cloud, DevOps & Tools',
             items: [
                 'AWS',
                 'Docker',
-                'Kubernetes',
+                'Github',
                 'CI/CD',
-                'Terraform',
-                'Jenkins',
-            ],
-        },
-        {
-            name: 'Databases',
-            items: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'DynamoDB'],
-        },
-        {
-            name: 'Tools & Others',
-            items: [
-                'Git',
                 'Linux',
                 'Agile',
                 'System Design',
                 'Microservices',
                 'Performance Optimization',
+            ],
+        },
+        {
+            name: 'Databases',
+            items: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Mongoose'],
+        },
+        {
+            name: 'Blockchain & Cyber Security',
+            items: [
+                'Solidity',
+                'Ethereum',
+                'Web3.js',
+                'IPFS',
+                'Cryptography',
+                'OSINT',
+                'Steganography',
+                'Web Security',
             ],
         },
     ],

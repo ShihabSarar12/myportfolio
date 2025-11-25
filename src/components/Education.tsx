@@ -4,9 +4,14 @@ import { useRef } from 'react';
 import { GraduationCap, MapPin, Calendar, Award, BookOpen } from 'lucide-react';
 import { education } from '../data/portfolio';
 
-export function Education() {
+const Education = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
+    const getGPAType = (gpaString: string): string => {
+        const parts = gpaString.split('/');
+        const numericPart = parseFloat(parts[1]);
+        return numericPart === 4.0 ? 'CGPA' : 'GPA';
+    };
 
     return (
         <div className='relative py-20 lg:py-32 underwater-content'>
@@ -90,7 +95,9 @@ export function Education() {
                                         </div>
                                         <div className='flex items-center gap-1'>
                                             <Award className='w-4 h-4 text-yellow-400' />
-                                            <span>GPA: {edu.gpa}</span>
+                                            <span>
+                                                {getGPAType(edu.gpa)}: {edu.gpa}
+                                            </span>
                                         </div>
                                     </div>
 
@@ -126,19 +133,28 @@ export function Education() {
                                         </div>
                                         <ul className='space-y-1'>
                                             {edu.achievements.map(
-                                                (achievement, idx) => (
-                                                    <li
-                                                        key={idx}
-                                                        className='text-white/70 flex items-start gap-2'
-                                                    >
-                                                        <span className='text-blue-500 mt-1'>
-                                                            •
-                                                        </span>
-                                                        <span>
-                                                            {achievement}
-                                                        </span>
-                                                    </li>
-                                                )
+                                                (achievement, idx) => {
+                                                    const [title, description] =
+                                                        achievement.split(
+                                                            ' - '
+                                                        );
+                                                    return (
+                                                        <li
+                                                            key={idx}
+                                                            className='text-white/70 flex items-start gap-2'
+                                                        >
+                                                            <span className='text-blue-500 mt-1'>
+                                                                •
+                                                            </span>
+                                                            <span>
+                                                                <strong>
+                                                                    {title}
+                                                                </strong>{' '}
+                                                                - {description}
+                                                            </span>
+                                                        </li>
+                                                    );
+                                                }
                                             )}
                                         </ul>
                                     </div>
@@ -150,4 +166,6 @@ export function Education() {
             </div>
         </div>
     );
-}
+};
+
+export { Education };

@@ -21,7 +21,7 @@ const categoryColors: Record<string, string> = {
     default: 'from-blue-500 to-purple-600',
 };
 
-export function AchievementsDetailed() {
+const AchievementsDetailed = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -65,15 +65,15 @@ export function AchievementsDetailed() {
             </div>
         </div>
     );
-}
+};
 
-function AchievementCard({
+const AchievementCard = ({
     achievement,
     index,
 }: {
     achievement: any;
     index: number;
-}) {
+}) => {
     const Icon = categoryIcons[achievement.category] || categoryIcons.default;
     const colorGradient =
         categoryColors[achievement.category] || categoryColors.default;
@@ -134,4 +134,6 @@ function AchievementCard({
             </motion.div>
         </motion.div>
     );
-}
+};
+
+export { AchievementsDetailed };

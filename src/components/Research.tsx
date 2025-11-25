@@ -11,7 +11,7 @@ import {
 import { motion } from 'framer-motion';
 import { useMemo } from 'react';
 
-export default function ResearchPaperPage({ id }: { id?: number }) {
+const ResearchPaperPage = ({ id }: { id?: number }) => {
     const paper = useMemo(
         () => research.find((p) => p.id === Number(id)),
         [id]
@@ -39,9 +39,9 @@ export default function ResearchPaperPage({ id }: { id?: number }) {
             <ResearchCard paper={paper} />
         </div>
     );
-}
+};
 
-function ResearchCard({ paper }: { paper: any }) {
+const ResearchCard = ({ paper }: { paper: any }) => {
     const formatAuthors = (authors: string, yourName: string) =>
         authors.split(',').map((author, i) => {
             const trimmed = author.trim();
@@ -70,11 +70,14 @@ function ResearchCard({ paper }: { paper: any }) {
 
         let html = text;
 
-        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(
+            /\*\*(.*?)\*\*/g,
+            '<strong class="font-bold">$1</strong>'
+        );
         html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
         html = html.replace(
             /!\[(.*?)\]\((.*?)\)/g,
-            '<img src="$2" alt="$1" class="mx-auto block rounded-lg my-4 w-5/6" />'
+            '<img src="$2" alt="$1" class="mx-auto block rounded-lg my-4 w-5/6 max-h-[50rem]" />'
         );
         html = html.replace(/\n/g, '<br />');
 
@@ -105,10 +108,12 @@ function ResearchCard({ paper }: { paper: any }) {
                                 <Award className='w-3 h-3' />
                                 <span>Rank: {paper.rank}</span>
                             </span>
-                            <span className='inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 border border-green-500/20 text-white'>
-                                <Star className='w-3 h-3' />
-                                <span>IF: {paper.impactFactor}</span>
-                            </span>
+                            {paper.impactFactor && (
+                                <span className='inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 border border-green-500/20 text-white'>
+                                    <Star className='w-3 h-3' />
+                                    <span>IF: {paper.impactFactor}</span>
+                                </span>
+                            )}
                         </div>
                         <span className='text-white/70'>{paper.date}</span>
                     </div>
@@ -179,4 +184,6 @@ function ResearchCard({ paper }: { paper: any }) {
             </div>
         </motion.div>
     );
-}
+};
+
+export default ResearchPaperPage;

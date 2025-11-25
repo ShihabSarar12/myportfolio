@@ -4,7 +4,7 @@ import WholeCanvas from './components/canvas/WholeCanvas';
 import { Navbar } from './components/Navbar';
 import isWebGLUsable from './utilities/isWebGLUsable';
 
-function App() {
+const App = () => {
     const [supports3D, setSupports3D] = useState<boolean | null>(null);
 
     useEffect(() => {
@@ -13,7 +13,11 @@ function App() {
     }, []);
 
     if (supports3D === null) {
-        return <div>Checking device capabilities…</div>;
+        return (
+            <div className='text-white bg-black h-screen w-screen p-10 flex justify-center items-center'>
+                <h1 className='font-bold'>Checking Device Capabilities</h1>
+            </div>
+        );
     }
 
     if (!supports3D) {
@@ -39,6 +43,6 @@ function App() {
             </div>
         </div>
     );
-}
+};
 
 export default App;

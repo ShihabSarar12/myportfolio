@@ -4,7 +4,6 @@ import { useRef } from 'react';
 import { Code2, Database, Brain, Cloud, Rocket, Users } from 'lucide-react';
 import { personalInfo, skills } from '../data/portfolio';
 import { skillIcons } from '../data/skillIcons';
-import { useTilt } from '../hooks/useTilt';
 
 const highlights = [
     {
@@ -39,7 +38,7 @@ const highlights = [
     },
 ];
 
-function HighlightCard({
+const HighlightCard = ({
     item,
     index,
     isInView,
@@ -47,24 +46,22 @@ function HighlightCard({
     item: any;
     index: number;
     isInView: boolean;
-}) {
-    const cardRef = useTilt<HTMLDivElement>();
-
+}) => {
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.35, delay: 0.1 * index }}
+            className='w-full h-full flex flex-col'
         >
             <motion.div
-                ref={cardRef}
                 whileHover={{
                     scale: 1.05,
                     y: -1,
                     backdropFilter: 'blur(16px)',
                     transition: { duration: 0.25, ease: 'easeOut' },
                 }}
-                className='p-6 rounded-2xl bg-white/0 border border-white/10 hover:border-white/20 backdrop-blur-none shadow-lg transition-all duration-300 cursor-pointer group'
+                className='p-6 rounded-2xl bg-white/0 border border-white/10 hover:border-white/20 shadow-lg transition-all duration-300 cursor-pointer group h-full'
             >
                 <div
                     className={`inline-flex p-3 rounded-lg bg-linear-to-br ${item.color} mb-3 transform transition-transform duration-300 group-hover:scale-110 drop-shadow-md`}
@@ -77,9 +74,9 @@ function HighlightCard({
             </motion.div>
         </motion.div>
     );
-}
+};
 
-export function About() {
+const About = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -120,18 +117,18 @@ export function About() {
                             }}
                             className='p-6 rounded-2xl bg-white/0 border border-white/10 backdrop-blur-none shadow-lg transition-all duration-300'
                         >
-                            <p className='text-white font-semibold mb-6 drop-shadow-md'>
+                            <p className='text-white mb-6 drop-shadow-md'>
                                 {personalInfo.bio}
                             </p>
                             <div className='space-y-4'>
                                 <div className='flex items-center gap-3'>
-                                    <div className='w-2 h-2 rounded-full bg-linear-to-r from-blue-500 to-purple-600' />
+                                    <div className='w-2 h-2 rounded-full bg-purple-600' />
                                     <span className='text-white font-medium drop-shadow-md'>
                                         {personalInfo.location}
                                     </span>
                                 </div>
                                 <div className='flex items-center gap-3'>
-                                    <div className='w-2 h-2 rounded-full bg-linear-to-r from-blue-500 to-purple-600' />
+                                    <div className='w-2 h-2 rounded-full bg-purple-600' />
                                     <span className='text-white font-medium drop-shadow-md'>
                                         {personalInfo.email}
                                     </span>
@@ -204,7 +201,7 @@ export function About() {
                                                     return (
                                                         <span
                                                             key={skillIndex}
-                                                            className='flex items-center gap-2 px-3 py-1 rounded-full bg-white/0 backdrop-blur-none text-white font-medium transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-xl cursor-default drop-shadow-md'
+                                                            className='flex items-center gap-2 px-3 py-1 rounded-full bg-white/0 backdrop-blur-none text-white font-medium transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-xl cursor-pointer drop-shadow-md'
                                                         >
                                                             <Icon
                                                                 color={color}
@@ -225,4 +222,6 @@ export function About() {
             </div>
         </div>
     );
-}
+};
+
+export { About };

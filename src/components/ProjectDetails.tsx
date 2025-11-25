@@ -4,7 +4,7 @@ import { ContentRenderer } from './ContentRenderer';
 import { Code, Star, Download, Github, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export default function ProjectDetails({ id }: { id?: number }) {
+const ProjectDetails = ({ id }: { id?: number }) => {
     const project = useMemo(
         () => projects.find((p) => p.id === Number(id)),
         [id]
@@ -139,4 +139,6 @@ export default function ProjectDetails({ id }: { id?: number }) {
             </motion.div>
         </div>
     );
-}
+};
+
+export default ProjectDetails;

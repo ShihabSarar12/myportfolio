@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { ExternalLink, Github, Star, Download, Code } from 'lucide-react';
 import { projects } from '../data/portfolio';
 
-export function ProjectsDetailed() {
+const ProjectsDetailed = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -48,9 +48,9 @@ export function ProjectsDetailed() {
             </div>
         </div>
     );
-}
+};
 
-function ProjectCard({
+const ProjectCard = ({
     project,
     index,
     isInView,
@@ -58,7 +58,7 @@ function ProjectCard({
     project: any;
     index: number;
     isInView: boolean;
-}) {
+}) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -176,4 +176,6 @@ function ProjectCard({
             </div>
         </motion.div>
     );
-}
+};
+
+export { ProjectsDetailed };

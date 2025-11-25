@@ -5,7 +5,7 @@ import ProjectDetails from './components/ProjectDetails';
 import IndividualPageCanvas from './components/canvas/IndividualPageCanvas';
 import ResearchPaperPage from './components/Research';
 
-export default function RouteWrapper() {
+const RouteWrapper = () => {
     return (
         <BrowserRouter>
             <Routes>
@@ -37,4 +37,6 @@ export default function RouteWrapper() {
             </Routes>
         </BrowserRouter>
     );
-}
+};
+
+export default RouteWrapper;

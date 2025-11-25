@@ -5,7 +5,7 @@ import { Briefcase, MapPin, Calendar, ChevronRight } from 'lucide-react';
 import { experiences } from '../data/portfolio';
 import { useTilt } from '../hooks/useTilt';
 
-function ExperienceCard({ exp }: { exp: any }) {
+const ExperienceCard = ({ exp }: { exp: any }) => {
     const cardRef = useTilt<HTMLDivElement>();
 
     return (
@@ -78,9 +78,9 @@ function ExperienceCard({ exp }: { exp: any }) {
             </div>
         </motion.div>
     );
-}
+};
 
-export function Experience() {
+const Experience = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -151,4 +151,6 @@ export function Experience() {
             </div>
         </div>
     );
-}
+};
+
+export { Experience };

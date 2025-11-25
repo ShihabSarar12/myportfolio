@@ -14,7 +14,7 @@ const navItems = [
     { name: 'Contact', href: '#contact' },
 ];
 
-export function Navbar() {
+const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const scrollToSection = useCallback((href: string) => {
@@ -130,4 +130,6 @@ export function Navbar() {
             </AnimatePresence>
         </motion.nav>
     );
-}
+};
+
+export { Navbar };

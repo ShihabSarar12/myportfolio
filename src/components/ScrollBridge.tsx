@@ -1,7 +1,7 @@
 import { useScroll } from '@react-three/drei';
 import { useEffect } from 'react';
 
-export function ScrollBridge() {
+const ScrollBridge = () => {
     const scroll = useScroll();
 
     useEffect(() => {
@@ -9,4 +9,6 @@ export function ScrollBridge() {
     }, [scroll]);
 
     return null;
-}
+};
+
+export { ScrollBridge };

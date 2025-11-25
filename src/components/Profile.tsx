@@ -3,7 +3,7 @@ import { ChevronDown, Download, Mail } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 import profileImage from '../assets/profile.png';
 
-export function Profile() {
+const Profile = () => {
     return (
         <section
             id='home'
@@ -118,4 +118,6 @@ export function Profile() {
             </div>
         </section>
     );
-}
+};
+
+export { Profile };

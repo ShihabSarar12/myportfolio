@@ -24,7 +24,7 @@ const sections = [
         icon: Briefcase,
         title: 'Experience',
         description:
-            '5+ years building scalable systems across various industries',
+            '2+ years building scalable systems across various industries',
         color: 'from-purple-500 to-pink-500',
     },
     {
@@ -32,14 +32,14 @@ const sections = [
         icon: GraduationCap,
         title: 'Education',
         description:
-            'MS in Computer Science with focus on AI and distributed systems',
+            'Bsc in Computer Science and Engineering with focus on AI and Machine Learning',
         color: 'from-green-500 to-emerald-500',
     },
     {
         id: 'research',
         icon: FileText,
         title: 'Research',
-        description: '5+ published papers in top-tier conferences and journals',
+        description: '2+ published papers in top-tier conferences and journals',
         color: 'from-orange-500 to-red-500',
     },
     {
@@ -47,7 +47,7 @@ const sections = [
         icon: Code,
         title: 'Projects',
         description:
-            'Open source tools and libraries used by thousands of developers',
+            'Successfully Delivered Projects for International Clients, Including Canada and Australia',
         color: 'from-yellow-500 to-orange-500',
     },
     {
@@ -59,7 +59,7 @@ const sections = [
     },
 ];
 
-export function SectionOverview() {
+const SectionOverview = () => {
     const scrollToSection = useCallback((href: string) => {
         const id = href.startsWith('#') ? href.slice(1) : href;
         const el = document.getElementById(id);
@@ -106,7 +106,7 @@ export function SectionOverview() {
                                             ease: 'easeOut',
                                         },
                                     }}
-                                    className='group relative p-6 rounded-2xl border border-white/10 bg-transparent backdrop-blur-0 hover:backdrop-blur-md hover:border-white/20 transition-all duration-300 shadow-lg text-left cursor-pointer'
+                                    className='group relative p-6 rounded-2xl border border-white/10 bg-transparent hover:backdrop-blur-md hover:border-white/20 transition-all duration-300 shadow-lg text-left cursor-pointer'
                                 >
                                     <div
                                         className={`inline-flex p-4 rounded-xl bg-linear-to-br ${section.color} mb-4 transform transition-transform duration-300 group-hover:scale-110`}
@@ -134,4 +134,6 @@ export function SectionOverview() {
             </div>
         </section>
     );
-}
+};
+
+export { SectionOverview };

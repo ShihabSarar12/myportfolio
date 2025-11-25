@@ -4,7 +4,7 @@ interface ContentRendererProps {
     content: string;
 }
 
-export function ContentRenderer({ content }: ContentRendererProps) {
+const ContentRenderer = ({ content }: ContentRendererProps) => {
     const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
     const parts: Array<{
         type: 'text' | 'image';
@@ -66,9 +66,9 @@ export function ContentRenderer({ content }: ContentRendererProps) {
             })}
         </div>
     );
-}
+};
 
-function FormattedText({ text }: { text: string }) {
+const FormattedText = ({ text }: { text: string }) => {
     const boldRegex = /\*\*([^*]+)\*\*/g;
     const parts: Array<{ type: 'normal' | 'bold'; content: string }> = [];
 
@@ -117,4 +117,6 @@ function FormattedText({ text }: { text: string }) {
             ))}
         </div>
     );
-}
+};
+
+export { ContentRenderer };
